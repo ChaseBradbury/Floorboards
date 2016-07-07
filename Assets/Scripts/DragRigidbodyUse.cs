@@ -127,7 +127,8 @@ public class DragRigidbodyUse : MonoBehaviour {
 				distance = ItemGrab.m_ItemDistance;
 				maxDistanceGrab = ItemGrab.m_ItemMaxGrab;
 			}
-			if(hit.collider.tag == Tags.m_DoorsTag && tryPickupObject){
+			if(hit.collider.CompareTag(Tags.m_DoorsTag) && tryPickupObject){
+				Debug.Log("Tag compared correctly");
 				isObjectHeld = true;
 				objectHeld.GetComponent<Rigidbody>().useGravity = true;
 				objectHeld.GetComponent<Rigidbody>().freezeRotation = false;
