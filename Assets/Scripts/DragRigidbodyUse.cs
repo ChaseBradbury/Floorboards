@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -39,6 +40,8 @@ public class DragRigidbodyUse : MonoBehaviour {
 	
 	public GameObject playerCam;
 	
+	public Image crosshair;
+
 	public string GrabButton = "Grab";
 	public string ThrowButton = "Throw";
 	public string UseButton = "Use";
@@ -64,6 +67,20 @@ public class DragRigidbodyUse : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
+		Ray playerAim = playerCam.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+		RaycastHit hit;
+		
+		if (Physics.Raycast (playerAim, out hit, PickupRange)){		
+			objectHeld = hit.collider.gameObject;
+			if(hit.collider.CompareTag(Tags.m_InteractTag) ||
+				hit.collider.CompareTag(Tags.m_DoorsTag))
+			{
+				crosshair.color = Color.red; 
+			}
+		} else {
+			crosshair.color = Color.white; 
+		}
+
 		if(Input.GetMouseButton(0)){
 			if(!isObjectHeld){
 				tryPickObject();
