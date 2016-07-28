@@ -262,7 +262,7 @@ MonoBehaviour:
     m_FreezeRotation: 0
     m_PickupRange: 3
     m_ThrowStrength: 50
-    m_distance: 3
+    m_distance: 1.5
     m_maxDistanceGrab: 4
   ItemGrab:
     m_FreezeRotation: 0
