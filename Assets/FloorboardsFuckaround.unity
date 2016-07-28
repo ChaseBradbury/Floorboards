@@ -2998,7 +2998,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1876804345}
     - target: {fileID: 11440378, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
-      propertyPath: ObjectGrab.m_distance
+      propertyPath: ObjectGrab.m_PickupRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440378, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
+      propertyPath: ObjectGrab.m_maxDistanceGrab
       value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

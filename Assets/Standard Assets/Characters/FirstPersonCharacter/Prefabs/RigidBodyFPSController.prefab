@@ -260,10 +260,10 @@ MonoBehaviour:
   UseButton: Use
   ObjectGrab:
     m_FreezeRotation: 0
-    m_PickupRange: 3
+    m_PickupRange: 1.5
     m_ThrowStrength: 50
     m_distance: 1.5
-    m_maxDistanceGrab: 4
+    m_maxDistanceGrab: 1.5
   ItemGrab:
     m_FreezeRotation: 0
     m_ItemPickupRange: 2
