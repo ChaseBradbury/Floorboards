@@ -22,7 +22,7 @@ public class CrawlingController : MonoBehaviour {
 		}
 		else if (Input.GetKeyDown (KeyCode.C) && !isStanding) 
 		{
-			transform.localScale = new Vector3 (transform.localScale.x, proneHeight, transform.localScale.z);
+			transform.localScale = new Vector3 (transform.localScale.x, standingHeight, transform.localScale.z);
 			isStanding = true;
 			print ("stand up");
 		}
